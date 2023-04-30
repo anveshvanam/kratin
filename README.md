@@ -2,6 +2,13 @@
 
 This is a web application that allows users to store information about their medication and track when they need to take it. The app shows you what medications you need to take for the day
 
+<img src="images/ss4.png" alt="Image" width="384" height="854">
+<img src="images/ss1.png" alt="Image" width="384" height="854">
+<img src="images/ss3.png" alt="Image" width="384" height="854">
+<img src="images/ss2.png" alt="Image" width="384" height="854">
+
+
+
 ## Features
 
 - Add new medication with details such as name, dosage, and frequency
