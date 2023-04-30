@@ -1,5 +1,6 @@
 import { ImInfo } from "react-icons/im";
-import AddMedicine from "../add-medicine";
+import { withRouter } from "react-router-dom";
+import AddMedicine from "../AddMedicine";
 
 function Home() {
   return (
@@ -12,23 +13,13 @@ function Home() {
             Medication to the records
           </p>
         </div>
-        <div className="flex items-center w-full flex-wrap lg:justify-center">
-          <p className="before:content-['*'] before:ml-0.5 before:text-red-500 block font-medium ">
-            Click on
-            <span className="mx-3 font-bold"> Add Appointment</span> to add
-            Appointment to the records
-          </p>
-        </div>
       </div>
       <div className="flex w-full mt-5 justify-between gap-5 lg:w-1/4 lg:mt-16 items-center">
-        <button className="h-10 w-44 font-bold bg-white text-black border-black border-solid border-2">
+        <button className="h-10 w-44 font-bold bg-black text-white rounded-md border-black border-solid border-2">
           Add Medication
         </button>
-        <button className="h-10 w-44 font-bold bg-gray-600 text-white border-0">
-          Add Appointment
-        </button>
       </div>
-      <div className="flex flex-col items-center justify-center mt-10 border-black border-2 w-full">
+      <div className="flex flex-col items-center justify-center mt-10 border-2 w-full">
         <div className="flex justify-between w-full items-center">
           <h1 className="">Medicine name</h1>
           <p className="">Dose</p>

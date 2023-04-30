@@ -46,15 +46,12 @@ function AddMedicine() {
             className="border-[1px] w-1/2 border-black border-solid ml-10 h-10 px-3"
           />
         </label>
-        <label>
-          Frequency:
-          <input
-            type="text"
-            value={frequency}
-            onChange={(e) => setFrequency(e.target.value)}
-          />
-        </label>
-        <button type="submit">Add Medicine</button>
+        <button
+          type="submit"
+          className="bg-black self-center text-white w-40 h-10 rounded-md"
+        >
+          Add Medicine
+        </button>
       </form>
       <ul>
         {medicines.map((medicine, index) => (

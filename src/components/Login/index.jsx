@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 
+import Cookies from "js-cookie";
+
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -21,12 +23,23 @@ function Login() {
       username: user,
       password: pass,
     };
+    console.log(userDetails);
+    console.log(JSON.stringify(userDetails));
     const options = {
       method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
       body: JSON.stringify(userDetails),
     };
     const response = await fetch(url, options);
+    const data = await response.json();
     console.log(response);
+    console.log(data);
+    if (response.ok) {
+      Cookies.set("token", data.token);
+      history.push("/home");
+    }
   };
 
   return (
