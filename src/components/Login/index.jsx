@@ -38,7 +38,6 @@ function Login() {
     console.log(data);
     if (response.ok) {
       Cookies.set("token", data.token);
-      history.push("/home");
     }
   };
 
