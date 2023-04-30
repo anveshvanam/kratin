@@ -1,3 +1,5 @@
+import { Link } from "react-router-dom";
+
 function Landing() {
   return (
     <>
@@ -8,10 +10,7 @@ function Landing() {
         </h1>
         <div className="flex items-center justify-center">
           <button className="bg-white text-black text-[1.5rem] px-5 py-2 rounded-md m-5">
-            Login
-          </button>
-          <button className="bg-white text-black text-[1.5rem] px-5 py-2 rounded-md m-5">
-            Sign Up
+            <Link to="/login">Login</Link>
           </button>
         </div>
       </div>

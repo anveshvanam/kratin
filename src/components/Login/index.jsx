@@ -1,11 +1,12 @@
 import React, { useState } from "react";
+import { useNavigate } from "react-router-dom";
 
 import Cookies from "js-cookie";
 
 function Login() {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
-
+  const navigate = useNavigate();
   const handleUsernameChange = (event) => {
     setUsername(event.target.value);
   };
@@ -37,7 +38,8 @@ function Login() {
     console.log(response);
     console.log(data);
     if (response.ok) {
-      Cookies.set("token", data.token);
+      Cookies.set("token", data.jwtToken);
+      navigate("/home");
     }
   };
 
